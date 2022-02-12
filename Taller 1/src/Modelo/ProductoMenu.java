@@ -1,15 +1,16 @@
 package Modelo;
 
-public class ProductoMenu implements Producto{
+public class ProductoMenu implements Producto
+{
 
-	
-	
+	//Atributos
 	
 	private String nombre;
 	
 	private int precioBase;
 	
 	
+	//Constructor
 	
 	public ProductoMenu (String nombre, int precioBase) 
 	{
@@ -18,22 +19,24 @@ public class ProductoMenu implements Producto{
 	}
 	
 	
-
-
 	
-	public int getPrecio() {
-		return this.precioBase;
+	//Métodos
+	
+	
+	public int getPrecio() 
+	{
+		return precioBase;
 	}
 
 
-	
-	public String getNombre() {
-		return this.nombre;
+	public String getNombre() 
+	{
+		return nombre;
 	}
 
 
-	
-	public String generarTextoFactura() {
+	public String generarTextoFactura() 
+	{
 		return nombre+" : $"+precioBase;
 	}
 

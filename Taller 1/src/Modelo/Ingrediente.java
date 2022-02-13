@@ -5,8 +5,10 @@ public class Ingrediente
 
 	//Atributos
 	
+	//Nombre Ingrediente
 	private String nombre;
 	
+	//Costo del ingrediente adicional
 	private int costoAdicional;
 	
 	
@@ -22,13 +24,17 @@ public class Ingrediente
 	
 	//Métodos
 	
-	
+	/**
+	 * Retorna el nombre
+	 */
 	public String getNombre() 
 	{
 		return nombre;
 	}
 	
-
+	/**
+	 * Retorna el precio del ingrediente adicional
+	 */
 	public int getCostoAdicional() 
 	{
 		return costoAdicional;

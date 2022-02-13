@@ -19,22 +19,30 @@ public class ProductoMenu implements Producto
 	}
 	
 	
-	
 	//Métodos
 	
 	
+	/**
+	 * Retorna el precio
+	 */
 	public int getPrecio() 
 	{
 		return precioBase;
 	}
 
 
+	/**
+	 * Retorna el nombre
+	 */
 	public String getNombre() 
 	{
 		return nombre;
 	}
 
 
+	/**
+	 * Genera el texto factura
+	 */
 	public String generarTextoFactura() 
 	{
 		return nombre+" : $"+precioBase;

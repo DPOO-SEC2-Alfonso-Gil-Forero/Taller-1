@@ -1,7 +1,9 @@
 package Modelo;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Restaurante 
 {
@@ -50,9 +52,17 @@ public class Restaurante
 		cargarCombos (archivoCombos);
 	}
 	
+	public void main (String[] args) throws FileNotFoundException{
+
+		File doc =
+		  new File("C:\\data\\ingredientes.txt");
+		Scanner obj = new Scanner(doc);
+
+		while (obj.hasNextLine())
+		    System.out.println(obj.nextLine());
+	}
 	
-	
-	private void cargarIngredientes (File archivoIngredientes)
+	private void cargarIngredientes (File archivoIngredientes) throws FileNotFoundException
 	{
 		
 	}

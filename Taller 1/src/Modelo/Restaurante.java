@@ -45,38 +45,47 @@ public class Restaurante
 	}
 	
 	
-	public void cargarInformacionRestaurante (File archivoIngredientes, File archivoMenu, File archivoCombos)
+	public void cargarInformacionRestaurante (File archivoIngredientes, File archivoMenu, File archivoCombos) throws FileNotFoundException
 	{
 		cargarIngredientes(archivoIngredientes);
 		cargarMenu (archivoMenu);
 		cargarCombos (archivoCombos);
 	}
 	
-	public void main (String[] args) throws FileNotFoundException{
-
-		File doc =
-		  new File("C:\\data\\ingredientes.txt");
-		Scanner obj = new Scanner(doc);
-
-		while (obj.hasNextLine())
-		    System.out.println(obj.nextLine());
-	}
 	
 	private void cargarIngredientes (File archivoIngredientes) throws FileNotFoundException
 	{
-		
+		File doc =
+		  new File("C:\\data\\ingredientes.txt");
+		try (Scanner obj = new Scanner(doc)) 
+		{
+			while (obj.hasNextLine())
+			    System.out.println(obj.nextLine());
+		}
 	}
 	
 	
-	private void cargarMenu (File archivoMenu)
+	private void cargarMenu (File archivoMenu) throws FileNotFoundException
 	{
-		
+		File doc =
+		  new File("C:\\data\\menu.txt");
+		try (Scanner obj = new Scanner(doc)) 
+		{
+			while (obj.hasNextLine())
+			    System.out.println(obj.nextLine());
+		}
 	}
 	
 	
-	private void cargarCombos (File archivoCombos)
+	private void cargarCombos (File archivoCombos) throws FileNotFoundException
 	{
-		
+		File doc =
+		  new File("C:\\data\\combos.txt");
+		try (Scanner obj = new Scanner(doc)) 
+		{
+			while (obj.hasNextLine())
+			    System.out.println(obj.nextLine());
+		}
 	}
 	
 	
